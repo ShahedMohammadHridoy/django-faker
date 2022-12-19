@@ -9,3 +9,6 @@ class Student(models.Model):
     email = models.EmailField(unique=True)
     phone_number = models.CharField(max_length=15)
     address = models.TextField()
+
+    def __str__(self):
+        return self.first_name
